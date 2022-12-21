@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd">
+		
+		<context:annotation-config />
+		
+		<!-- I am using annotation there is no need of below code -->
+		<!-- 
+		<bean id="pirate" class="com.configurable.Pirate">
+        </bean>
+		<bean id="treasureMap" class="com.configurable.TreasureMap" /> 
+		-->
+		
+		<bean id="e1" class="com.importExample.importResource.Employee">
+		<property name="name" value="#{'shashi'+'chandra'+'bhusan'}"></property>
+		<property name="address" value="Flat no-204, H-7 Kamgaar nagar, Kurla East"></property>
+        </bean>
+        
+        <bean name="engine" class="spring.expression.Engine">
+        <property name="capacity" value="2000"></property>
+        <property name="horsePower" value="10"></property>
+        <property name="numberOfCylinders" value="6"></property>
+        </bean>
+        
+        <bean name="car" class="spring.expression.Car">
+        <property name="make" value="Made in india"></property>
+        <property name="model" value="model11.00"></property>
+        <property name="horsePower" value="#{engine.horsePower}"></property><!-- in same fashion you can use arithmetic operator here -->
+        </bean>
+        
+        <bean id="qz" class="com.dependency.injection.Quiz">  
+		<constructor-arg value="201" type="int"></constructor-arg>
+		<constructor-arg value="Quiz"></constructor-arg>
+		<constructor-arg>
+		<map>
+		<entry key="A4" value="Answer4"></entry>
+		<entry key="A5" value="Answer5"></entry>
+		<entry key="A6" value="Answer6"></entry>
+		<entry key="A7" value="Answer7"></entry>
+		<entry key="A8" value="Answer8"></entry>
+		</map>
+		</constructor-arg>
+		</bean>
+        
+        
+        <bean id="m1" class="com.dependency.injection.Question">  
+		<constructor-arg value="101" type="int"></constructor-arg>
+		<constructor-arg value="Question"></constructor-arg>
+		<constructor-arg>
+		<list>
+		<value>Answer1</value>
+		<value>Answer2</value>
+		<value>Answer3</value>
+		<value>Answer4</value>
+		</list>
+		</constructor-arg>
+		</bean>
+		
+		<bean id="q1" class="com.dependency.injection.MarksDetail">  
+		<constructor-arg value="subject1"></constructor-arg>
+		<constructor-arg value="40" type="int"></constructor-arg>
+		<constructor-arg value="subject2"></constructor-arg>
+		<constructor-arg value="50"	type="int"></constructor-arg>
+		<constructor-arg value="subject3"></constructor-arg>
+		<constructor-arg value="60" type="int"></constructor-arg>
+		</bean>
+        
+       <bean id="s1" class="com.dependency.injection.Student">  
+		<constructor-arg value="Ibook development Team"></constructor-arg>
+		<constructor-arg value="LT development Team"></constructor-arg> 
+		<constructor-arg><ref bean="m1"/> </constructor-arg>
+		<constructor-arg><ref bean="q1"/> </constructor-arg>
+		<constructor-arg><ref bean="qz"/> </constructor-arg>
+		</bean> 
+        
+        
+</beans>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd">
+		
+		<context:annotation-config />
+        
+       <bean id="s1" class="inheriting.bean.Student">  
+		<constructor-arg value="Student Name"></constructor-arg>
+		<constructor-arg value="Student Address"></constructor-arg> 
+		</bean>
+		
+		<bean id="j1" class="inheriting.bean.JavaDeveloper">  
+		<constructor-arg value="Developer Name"></constructor-arg>
+		<constructor-arg value="Developer Address"></constructor-arg> 
+		</bean>  
+		
+		 <bean id="student" class="inheriting.bean.Student" parent="s1">  
+		 <constructor-arg>
+		 <ref bean="j1"/>
+		 </constructor-arg>
+		</bean>
+		
+		<!-- Setter Injection Example -->
+		
+		<bean id="s2" class="setter.injection.Student">
+		<property name="studentName" value="My name is khan"></property>  
+		<property name="studentAddress" value="corporate park , unit-8"></property>
+		</bean>
+		
+		<bean id="j2" class="setter.injection.JavaDeveloper">  
+		<property name="developerName" value="Developer Jee"></property>  
+		<property name="devloperTech" value="Working with Stuts1.x"></property> 
+		</bean>
+		
+		<!-- Auto wiring byName -->
+		
+		<bean id="student1" class="spring.autowiring.xml.based.byName.Student">
+		<property name="studentName" value="Student name(auto wiring by name example)"></property>  
+		<property name="studentAddress" value="corporate park , unit-8(Auto wiring by name example)"></property>
+		</bean>
+		
+		<bean id="j3" class="spring.autowiring.xml.based.byName.JavaDeveloper" autowire="byType">  
+		<property name="developerName" value="Developer Jee(byName autowiring)"></property>  
+		<property name="devloperTech" value="Working with Stuts1.x(byName autoWiring)"></property> 
+		</bean>
+		
+        <!-- Auto wiring byType -->
+        
+        <bean id="student11" class="spring.autowiring.xml.based.byType.Student">
+		<property name="studentName" value="Student name(auto wiring byType example)"></property>  
+		<property name="studentAddress" value="corporate park , unit-8(Auto wiring byType example)"></property>
+		</bean>
+		
+		<bean id="j4" class="spring.autowiring.xml.based.byType.JavaDeveloper" autowire="byType">  
+		<property name="developerName" value="Developer Jee(byType autowiring)"></property>  
+		<property name="devloperTech" value="Working with Stuts1.x(byType autoWiring)"></property> 
+		</bean>
+		
+		<!-- constructor auto-wiring -->
+        
+        <bean id="java1" class="spring.autowiring.xml.based.constructor.JavaDeveloper">
+		<property name="technology" value="Stuts,hibernate,spring"></property>  
+		</bean>
+		
+		<bean id="dotNet1" class="spring.autowiring.xml.based.constructor.DotNetDeveloper">
+		<property name="technolog" value="javaScript,VBScript"></property>  
+		</bean>
+		
+		<bean id="d1" class="spring.autowiring.xml.based.constructor.Developer" autowire="constructor">  
+		<property name="developerName" value="shashi bhusan patel"></property>  
+		<property name="developerAddress" value="H-7 flat no-204 kamgar nagar"></property> 
+		</bean>
+		
+		<!-- Factory method injection -->
+		
+		<bean id="d2" class="spring.method.factory.injection.example.Developer" factory-method="returnObject">  
+		</bean>
+        
+</beans>

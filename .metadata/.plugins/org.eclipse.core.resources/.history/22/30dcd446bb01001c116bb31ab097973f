@@ -1,0 +1,8 @@
+package com.patel.important;
+
+public class ExampleFive {
+
+	private ExampleFive() {
+		
+	}
+}

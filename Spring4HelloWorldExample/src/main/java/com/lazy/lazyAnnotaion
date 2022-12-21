@@ -1,0 +1,11 @@
+We use @Lazy when we want to initialize our bean lazily. By default, 
+Spring creates all singleton beans eagerly at the startup/bootstrapping of the application context.
+
+However, there are cases when we need to create a bean when we request it, not at application startup.
+
+This annotation behaves differently depending on where we exactly place it. We can put it on:
+
+    @Bean annotated bean factory method, to delay the method call (hence the bean creation)
+    @Configuration class and all contained @Bean methods will be affected
+    @Component class, which is not a @Configuration class, this bean will be initialized lazily
+    @Autowired constructor, setter, or field, to load the dependency itself lazily (via proxy)

@@ -1,0 +1,12 @@
+package com.streamAPI.example;
+
+import java.util.stream.Stream;
+
+public class MaxMinExample {
+	
+	public static void main(String s[])
+	{
+		Integer intStream=Stream.of(1,2,3,4,5,67,6);
+	}
+
+}

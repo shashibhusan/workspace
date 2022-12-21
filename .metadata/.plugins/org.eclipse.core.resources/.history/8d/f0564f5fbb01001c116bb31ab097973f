@@ -1,0 +1,13 @@
+package com.patel.important;
+
+public class ExampleFive {
+
+	public ExampleFive() {
+		
+	}
+}
+
+class ExampleFive1 extends ExampleFive
+{
+	
+}

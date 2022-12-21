@@ -1,0 +1,29 @@
+package importantProgram;
+
+public class CheckUniqueCharacterString {
+
+	public static void main(String[] args) {
+		
+		String inputString="Alive is awesome";
+		System.out.println("Given string have unique char");
+	}
+	
+	static boolean checkForUnique(String input)
+	{
+		boolean result=false;
+		
+		for(char ch : input.toCharArray())
+		{
+			if(input.indexOf(ch)==input.lastIndexOf(ch))
+			{
+				result=true;
+			}else
+			{
+				result=false;
+				break;
+			}
+		}
+		return result;
+	}
+
+}

@@ -1,0 +1,29 @@
+package atomicityAndRaceConditions;
+
+public class ExampleOfRaceCondition {
+	
+	public void show()
+	{
+		for (int i = 0; i < 5; i++) {
+			
+			System.out.println(Thread.currentThread().getName() +" -Number "+ i  );
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		final ExampleOfRaceCondition condition=new ExampleOfRaceCondition();
+		
+		Runnable runnable=new Runnable() {
+			@Override
+			public void run() {
+				 
+				condition.show();
+			}
+		};
+		
+		new Thread(runnable,"Thread 1").start();
+		new Thread(runnable,"Thread 2").start();
+	}
+
+}

@@ -1,0 +1,20 @@
+package importantProgram;
+
+public class CheckUniqueCharacterString {
+
+	public static void main(String[] args) {
+		 
+	}
+	
+	static boolean checkForUnique(String input)
+	{
+		boolean result=false;
+		
+		for(char ch : input.toCharArray())
+		{
+			
+		}
+		return result;
+	}
+
+}

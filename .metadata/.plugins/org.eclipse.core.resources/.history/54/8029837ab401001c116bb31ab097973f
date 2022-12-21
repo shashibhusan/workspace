@@ -1,0 +1,21 @@
+package com.patel.important;
+
+
+public class ExampleOfCallByReference {
+	
+	static int a=10;
+	static ExampleOfCallByReference five;
+	public static void main(String s[])
+	{
+		System.out.println("==111=="+a);
+		five.add(five);
+		System.out.println("==333=="+a);
+	}
+	
+	public static void add( ExampleOfCallByReference five)
+	{
+		 five.a=five.a+3;
+		System.out.println("==222=="+a);
+	}
+
+}

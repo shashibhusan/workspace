@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Apache Tomcat-config" deployDir="wtpwebapps" hostname="localhost" id="Apache Tomcat" name="Apache Tomcat" runtime-id="Apache Tomcat v7.0" server-type="org.eclipse.jst.server.tomcat.70" server-type-id="org.eclipse.jst.server.tomcat.70" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="6">
+    <list key="modules" value0="WSExample::org.eclipse.jst.jee.server:WSExample::jst.web::3.0" value1="WSExampleWithJson::org.eclipse.jst.jee.server:WSExampleWithJson::jst.web::3.0" value2="Spring-REST-JSON::org.eclipse.jst.j2ee.server:Spring-REST-JSON::jst.web::2.3" value3="patel::org.eclipse.jst.jee.server:patel::jst.web::2.5"/>
+  </server>
+</servers>

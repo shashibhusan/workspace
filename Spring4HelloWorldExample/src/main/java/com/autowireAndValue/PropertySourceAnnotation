@@ -1,0 +1,8 @@
+Use of @PropertySource annotation is in Pirate.java
+
+and if you have multiple resource file then
+
+@PropertySources({ 
+    @PropertySource("classpath:/annotations.properties"),
+    @PropertySource("classpath:/vehicle-factory.properties")
+})

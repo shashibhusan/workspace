@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.codehaus.groovy.eclipse.groovyScriptLaunchConfiguration">
+<stringAttribute key="org.codehaus.groovy.eclipse.launch.runType" value="com.shashi.Test"/>
+<listAttribute key="org.eclipse.jdt.launching.CLASSPATH">
+<listEntry value="E:\workspace\GroovyApp\bin"/>
+<listEntry value="E:\eclipse\plugins\org.codehaus.groovy_2.4.13.xx-201801052009-e45-RELEASE\lib\groovy-all-2.4.13.jar"/>
+<listEntry value="E:\eclipse\plugins\org.codehaus.groovy_2.4.13.xx-201801052009-e45-RELEASE\lib\bsf-2.4.0.jar"/>
+<listEntry value="E:\eclipse\plugins\org.codehaus.groovy_2.4.13.xx-201801052009-e45-RELEASE\lib\ivy-2.4.0.jar"/>
+<listEntry value="E:\eclipse\plugins\org.codehaus.groovy_2.4.13.xx-201801052009-e45-RELEASE\lib\servlet-api-2.4.jar"/>
+<listEntry value="C:\Users\shashi\.groovy\greclipse\global_dsld_support"/>
+<listEntry value="E:\eclipse\plugins\org.codehaus.groovy_2.4.13.xx-201801052009-e45-RELEASE\plugin_dsld_support\"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.codehaus.groovy.tools.GroovyStarter"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="--classpath &quot;${workspace_loc:\GroovyApp}\src;${workspace_loc:\GroovyApp}\bin&quot; --main groovy.ui.GroovyMain &quot;${resource_loc:/GroovyApp/src/com/shashi/Test.groovy}&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="GroovyApp"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=" -Dgroovy.home=&quot;${groovy_home}&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:\GroovyApp}"/>
+</launchConfiguration>

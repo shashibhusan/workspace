@@ -1,0 +1,12 @@
+package com.streamAPI.example;
+
+public class ImportantOperation {
+	
+	public static void main(String s[])
+	{
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.streamAPI.example;
+
+import java.util.Comparator;
+import java.util.stream.Stream;
+
+public class MaxMinExample {
+	
+	public static void main(String s[])
+	{
+		Integer maxInt=Stream.of(1,2,3,4,5,67,6).max(Comparator.comparing(Integer::valueOf)).get();
+		
+		Integer minInt=Stream.of(1,2,3,4,5,67,6).min(Comparator.comparing(Integer::valueOf)).get();
+		
+		System.out.println("Max : "+maxInt);
+		System.out.println("Min : "+minInt);
+	}
+
+}

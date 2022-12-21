@@ -1,0 +1,51 @@
+SpEL is an exression language supporting the features of querying and manipulating an object graph at runtime.
+It can be used with XML or annotation-based Spring.
+
+SpEL API
+
+The SpEL API provides many interfaces and classes. They are as follows:
+
+    Expression interface
+    SpelExpression class
+    ExpressionParser interface
+    SpelExpressionParser class
+    EvaluationContext interface
+    StandardEvaluationContext class
+    ***************************************************************************************
+    Note:-
+    
+    (1) AIRTHEMETIC OPERATOR:-
+    
+    Divide and modulo operations have alphabetic aliases, div for / and mod for %. The + operator can also be used to concatenate strings.
+    
+    @Value("#{36 div 2}") // 18
+	private double divideAlphabetic;
+	
+	@Value("#{37 mod 10}") // 7
+	private double moduloAlphabetic;
+	***************************************************************************************
+	
+	(2) Relational & logical OPERATOR:-
+	
+	All relational operators have alphabetic aliases, as well. For example, 
+	in XML-based configs we can’t use operators containing angle brackets (<, <=, >, >=).
+	Instead, we can use lt (less than), le (less than or equal), gt (greater than), or ge (greater than or equal). 
+	
+	@Value("#{1 <= 1}") // true
+	private boolean lessThanOrEqual;
+	 
+	@Value("#{1 le 1}") // true
+	private boolean lessThanOrEqualAlphabetic;
+	 
+	@Value("#{1 > 1}") // false
+	private boolean greaterThan;
+	 
+	@Value("#{1 gt 1}") // false
+	private boolean greaterThanAlphabetic;
+	 
+	@Value("#{1 >= 1}") // true
+	private boolean greaterThanOrEqual;
+	 
+	@Value("#{1 ge 1}") // true
+	private boolean greaterThanOrEqualAlphabetic; 
+	

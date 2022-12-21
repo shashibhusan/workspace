@@ -1,0 +1,10 @@
+@Required on setter methods to mark dependencies that we want to populate through XML:
+
+@Required
+void setColor(String color) {
+    this.color = color;
+}
+
+<bean class="com.baeldung.annotations.Bike">
+    <property name="color" value="green" />
+</bean>

@@ -1,0 +1,10 @@
+package com.streamAPI.example;
+
+public class MaxMinExample {
+	
+	public static void main(String s[])
+	{
+		
+	}
+
+}
